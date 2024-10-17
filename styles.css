@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Menu Principal */
+nav {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Banner */
+.banner {
+    background-image: url(t\ lindaa.png);
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2em;
+}
+
+/* Flexbox */
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.flex-item {
+    flex: 1;
+    margin: 10px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+.fcc-btn {
+    background-color: #199319;
+    color: white;
+    padding: 15px 25px;
+    height: 30px;            /* autura do botão */
+    margin-top: auto;
+    font-size: 1.5em;
+  }
+
+.flex-item img {
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.fcc-btn {
+    background-color: #199319;
+    color: white;
+    padding: 15px 25px;
+    height: 30px;            /* autura do botão */
+    margin-top: auto;
+    font-size: 1.5em;
+}
+
+/* Imagem com Texto ao Lado */
+.image-text-container {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+
+.image-text-container img {
+    max-width: 400px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.image-text-container div {
+    flex: 1;
+}
+
+/* Formulário */
+.form-container {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    text-align: absolute;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"] {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-container input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>produto - pagina de descrição</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: aliceblue;
+        }
+
+        header {
+            background-color: black;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #555;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        nav a:hover {
+            background-color: #333;
+        }
+
+        .container {
+            padding: 40px;
+            max-width: 2000px;
+            margin: 0 auto;
+            background-color: white;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .produto {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .produto img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+        }
+
+        .produto-info {
+            max-width: 500px;
+        }
+
+        .produto-info h2 {
+            margin-bottom: 10px;
+        }
+
+        .produto-info p {
+            margin-bottom: 10px;
+        }
+
+        .produto-info button {
+            background-color: chartreuse;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .produto-info button:hover {
+            background-color: chartreuse;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>loja de produtos</h1>
+    </header>
+    <nav>
+        <ul>
+        <a href="#">home</a>
+        <a href="#">Produtos</a>
+        <a href="#">Sobre</a>
+        <a href="#">Contato</a>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>descrição do produto</h1>
+        <div class="produto">
+            <video width="1000" height="360" controls>
+                <source src="img.png" type="video/mp4">
+            </div>
+            <div class="produto-info">
+                <h2>Iphone 16</h2>
+                <p> Este é um produto original seminovo (usado)</p>
+                <p>Impressionante como sempre.<br>A partir de R$ 541,58/mês ou R$ 6.499*</p>
+                <button>adicionar ao carrinho</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>loja da Iphone entre outras</p>
+    </footer>
+</body>
+</html>
