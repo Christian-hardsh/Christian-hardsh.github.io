@@ -19,7 +19,7 @@ nav ul {
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block; /* Modificado para inline-block para melhor controle em telas menores */
     margin-right: 20px;
 }
 
@@ -30,27 +30,30 @@ nav ul li a {
 
 /* Banner */
 .banner {
-    background-image: url(t\ lindaa.png);
+    background-image: url('t lindaa.png');
     background-size: cover;
     background-position: center;
-    height: 500px;
-    width: auto;
+    height: 50vh; /* Altura baseada na altura da tela */
+    width: 100%; /* Largura total da tela */
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     font-size: 2em;
+    text-align: center;
+    padding: 0 20px; /* Padding para espaçamento interno */
 }
 
 /* Flexbox */
 .flex-container {
     display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem linha em telas menores */
     justify-content: space-around;
     margin: 20px;
 }
 
 .flex-item {
-    flex: 1;
+    flex: 1 1 300px; /* Tamanho mínimo de 300px por item, com flexibilidade */
     margin: 10px;
     background-color: #f4f4f4;
     padding: 20px;
@@ -58,31 +61,20 @@ nav ul li a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
 }
-.fcc-btn {
-    background-color: #199319;
-    color: white;
-    padding: 15px 25px;
-    height: 30px;            /* autura do botão */
-    margin-top: auto;
-    font-size: 1.5em;
-  }
 
 .flex-item img {
     max-width: 100%;
     height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
+
 .fcc-btn {
     background-color: #199319;
     color: white;
     padding: 15px 25px;
-    height: 30px;            /* autura do botão */
+    font-size: 1.2em;
     margin-top: auto;
-    font-size: 1.5em;
+    width: 100%; /* Botão se adapta ao tamanho do container */
 }
 
 /* Imagem com Texto ao Lado */
@@ -90,10 +82,11 @@ nav ul li a {
     display: flex;
     align-items: center;
     margin: 20px;
+    flex-wrap: wrap; /* Permite que a imagem e o texto quebrem linha */
 }
 
 .image-text-container img {
-    max-width: 400px;
+    max-width: 100%;
     height: auto;
     margin-right: 20px;
 }
@@ -107,12 +100,13 @@ nav ul li a {
     margin: 20px;
     padding: 20px;
     background-color: #f4f4f4;
-    text-align: absolute;
+    text-align: center;
 }
 
 .form-container input[type="text"],
 .form-container input[type="email"] {
-    width: 80%;
+    width: 100%; /* Largura total para telas pequenas */
+    max-width: 500px; /* Limite máximo de largura para telas maiores */
     padding: 10px;
     margin: 10px 0;
     display: block;
@@ -126,6 +120,8 @@ nav ul li a {
     color: white;
     border: none;
     cursor: pointer;
+    width: 100%;
+    max-width: 300px;
 }
 
 /* Rodapé */
@@ -135,4 +131,62 @@ footer {
     text-align: center;
     padding: 10px;
     margin-top: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .banner {
+        font-size: 1.5em;
+    }
+
+    .nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-text-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-text-container img {
+        margin: 0 0 20px 0;
+    }
+
+    .fcc-btn {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        font-size: 1.2em;
+        height: 40vh;
+    }
+
+    .fcc-btn {
+        font-size: 1em;
+    }
+
+    .flex-item {
+        padding: 10px;
+    }
+
+    nav ul li {
+        margin-right: 10px;
+    }
+
+    .form-container input[type="text"],
+    .form-container input[type="email"] {
+        width: 90%;
+    }
+
+    .form-container input[type="submit"] {
+        width: 90%;
+    }
 }
